@@ -16,24 +16,20 @@ playing = True
 class Blackjack():
   global user_card_count
   
-  def __init__(self,input, user1_cards, dealer_cards):
-      uc_1 = user1_cards[0]
-      #random.choice(list_of_cards)
+  def __init__(self, input):
+      uc_1 = random.choice(list_of_cards)
       self.card_removal(uc_1)
       #user_card_count+=1
       
-      uc_2 = user1_cards[1]
-      #random.choice(list_of_cards)
+      uc_2 = random.choice(list_of_cards)
       self.card_removal(uc_2)
       #user_card_count+=1
       
-      cc_1 = dealer_cards[0]
-      #random.choice(list_of_cards)
+      cc_1 = random.choice(list_of_cards)
       self.card_removal(cc_1)
       #comp_card_count+=1
       
-      cc_2 = dealer_cards[1]
-      #random.choice(list_of_cards)
+      cc_2 = random.choice(list_of_cards)
       self.card_removal(cc_2)
       #comp_card_count+=1
       
@@ -46,7 +42,7 @@ class Blackjack():
       self.comp_logic()
       
       while user_playing:
-          uinput = input("Enter your move, either hold or hit: \n")
+          uinput = input
           if 'hit' in uinput:
               self.user_hit()
               
@@ -61,7 +57,25 @@ class Blackjack():
               Ace_check_comp = False
               Ace_check = False
               break
-        
+  
+  def init_cards(self):
+    uc_1 = random.choice(list_of_cards)
+    self.card_removal(uc_1)
+      #user_card_count+=1
+      
+    uc_2 = random.choice(list_of_cards)
+    self.card_removal(uc_2)
+      #user_card_count+=1
+      
+    cc_1 = random.choice(list_of_cards)
+    self.card_removal(cc_1)
+      #comp_card_count+=1
+      
+    cc_2 = random.choice(list_of_cards)
+    self.card_removal(cc_2)
+      #comp_card_count+=1
+    l = 
+    return []
 
   def comp_logic(self):
       global Ace_check_comp
