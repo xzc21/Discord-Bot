@@ -40,6 +40,7 @@ TOKEN = os.environ['token']
 
 
 
+
 #pfp
 pfp_path = "pfp_temp.png"
 fp = open(pfp_path, 'rb')
@@ -83,7 +84,7 @@ async def on_message(message):
 
     if message.content.startswith('$help'): #embed stuff https://cog-creators.github.io/discord-embed-sandbox/
       embed=discord.Embed(title="Help Command", color=0x264af4)
-      embed.add_field(name="Games", value="`$PlayRPS`\n`$PlayTTT \n$PlayBS`", inline=True)
+      embed.add_field(name="Games", value="`$PlayRPS`\n`$PlayTTT` \n`$PlayBS`", inline=True)
       await message.channel.send(embed=embed)
   
 
