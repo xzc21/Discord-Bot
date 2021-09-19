@@ -30,7 +30,7 @@ channel = 888638986413809674
 
 #https://discordpy.readthedocs.io/en/stable/quickstart.html
 TOKEN = ('ODg4NjMyNTg0OTMyODM1Mzk4.YUVhlg.oyKLti1oJhzcCZkCUi_9xvtwbQQ')
-name = "NAME"
+name = "GAME-BOT"
 
 #pfp
 pfp_path = "pfp_temp.png"
@@ -221,16 +221,16 @@ async def on_message(message):
     # if message.content.startswith('$Playbj'):
     #   bjgame = bj.Blackjack()
 
-    if message.content.startswith('$Playbj'):
-      await message.channel.send('Lets play BlackJack')
-      bjstatus = 0
-      user_cards = [random.choice(list_of_cards), random.choice(list_of_cards)]
-      bj.Blackjack()
+    # if message.content.startswith('$Playbj'):
+    #   await message.channel.send('Lets play BlackJack')
+    #   bjstatus = 0
+    #   user_cards = [random.choice(list_of_cards), random.choice(list_of_cards)]
+    #   bj.Blackjack()
       
       
     
-    if message.content.startswith('$hold') and bjstatus == 1:
-      await message.channel.send('Test hold')
+    # if message.content.startswith('$hold') and bjstatus == 1:
+    #   await message.channel.send('Test hold')
 
 
 
