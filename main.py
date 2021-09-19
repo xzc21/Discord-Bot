@@ -224,7 +224,7 @@ async def on_message(message):
     if message.content.startswith('$Playbj'):
       await message.channel.send('Lets play BlackJack')
       bjstatus = 0
-      user_cards = [random.choice(list_of_cards), random.cj]
+      user_cards = [random.choice(list_of_cards), random.choice(list_of_cards)]
       bj.Blackjack()
       
       
