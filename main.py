@@ -35,7 +35,7 @@ channel = 888638986413809674
 
 TOKEN = os.environ['token']
 
-name = "NAME"
+name = "GAME BOT"
 
 #pfp
 pfp_path = "pfp_temp.png"
