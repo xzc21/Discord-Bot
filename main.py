@@ -1,3 +1,6 @@
+
+
+import os
 import discord
 import requests
 import RockPaperScissors as rps
@@ -29,8 +32,9 @@ channel = 888638986413809674
 
 
 #https://discordpy.readthedocs.io/en/stable/quickstart.html
-#TOKEN = ('ODg4NjMyNTg0OTMyODM1Mzk4.YUVhlg.oyKLti1oJhzcCZkCUi_9xvtwbQQ')
-TOKEN = ('Nzc1MTY4OTY5NDg0NTMzODEx.X6iaXA.-bI50WnEwkzbJfUAjRR-0ET6vIU')
+
+TOKEN = os.environ['token']
+
 name = "NAME"
 
 #pfp
