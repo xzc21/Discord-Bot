@@ -1,5 +1,6 @@
 # Discord-Bot for Hack The North
 
+*the updated version is in the master branch for some odd reason*
 ## Inspiration
 We all use Discord and we wanted to understand the technology behind a Discord bot and how we could improve the user experience of bots.
 ## What it does
