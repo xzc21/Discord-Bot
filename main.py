@@ -32,14 +32,13 @@ channel = 888638986413809674
 
 
 #https://discordpy.readthedocs.io/en/stable/quickstart.html
-<<<<<<< HEAD
-TOKEN = ('ODg4NjMyNTg0OTMyODM1Mzk4.YUVhlg.oyKLti1oJhzcCZkCUi_9xvtwbQQ')
+
 name = "GAME-BOT"
 =======
 
 TOKEN = os.environ['token']
 
-name = "NAME"
+name = "BOT GAME"
 >>>>>>> master
 
 #pfp
