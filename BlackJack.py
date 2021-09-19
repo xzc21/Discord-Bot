@@ -10,29 +10,26 @@ winner = ''
 Ace_check = False
 Ace_check_comp = False
 playing = True
+uc_1 = 0
+uc_2 = 0
+cc_1 = 0
+cc_2 = 0
 
 
 
 class Blackjack():
   global user_card_count
+  global uc_1
+  global uc_2
+  global cc_1
+  global cc_2
+  global Ace_check
+  global Ace_check_comp
   
-  def __init__(self, input):
-      uc_1 = random.choice(list_of_cards)
-      self.card_removal(uc_1)
-      #user_card_count+=1
-      
-      uc_2 = random.choice(list_of_cards)
-      self.card_removal(uc_2)
-      #user_card_count+=1
-      
-      cc_1 = random.choice(list_of_cards)
-      self.card_removal(cc_1)
-      #comp_card_count+=1
-      
-      cc_2 = random.choice(list_of_cards)
-      self.card_removal(cc_2)
-      #comp_card_count+=1
-      
+  def __init__(self):
+      global Ace_check
+      global Ace_check_comp
+      self.init_cards()
       self.user1cards = [uc_1, uc_2]
       self.dealercards = [cc_1, cc_2]
       
@@ -42,11 +39,11 @@ class Blackjack():
       self.comp_logic()
       
       while user_playing:
-          uinput = input
-          if 'hit' in uinput:
+          uinput = input("Enter")
+          if 'hit' == uinput:
               self.user_hit()
               
-          if 'hold' in uinput:
+          if 'hold' == uinput:
               self.user_hold()
       while playing:
           if user_playing == False and comp_playing == False:
@@ -59,6 +56,10 @@ class Blackjack():
               break
   
   def init_cards(self):
+    global uc_1
+    global uc_2
+    global cc_1
+    global cc_2
     uc_1 = random.choice(list_of_cards)
     self.card_removal(uc_1)
       #user_card_count+=1
@@ -74,8 +75,8 @@ class Blackjack():
     cc_2 = random.choice(list_of_cards)
     self.card_removal(cc_2)
       #comp_card_count+=1
-    l = 
-    return []
+    l = [uc_1, uc_2, cc_1, cc_2]
+    return [l]
 
   def comp_logic(self):
       global Ace_check_comp
@@ -164,4 +165,4 @@ class Blackjack():
           winner = "It's a tie!"
           
 
-#Blackjack()
+Blackjack()
