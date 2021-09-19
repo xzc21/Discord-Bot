@@ -33,9 +33,9 @@ channel = 888638986413809674
 
 #https://discordpy.readthedocs.io/en/stable/quickstart.html
 
+name = "GAME BOT"
 TOKEN = os.environ['token']
 
-name = "GAME BOT"
 
 #pfp
 pfp_path = "pfp_temp.png"
