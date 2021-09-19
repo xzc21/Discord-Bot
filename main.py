@@ -34,15 +34,13 @@ channel = 888638986413809674
 #https://discordpy.readthedocs.io/en/stable/quickstart.html
 
 
-name = "GAME-BOT"
-=======
+
+
 
 TOKEN = os.environ['token']
 
 name = "BOT GAME"
 
-=======
-TOKEN = os.environ['token']
 
 
 
