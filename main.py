@@ -37,9 +37,9 @@ channel = 888638986413809674
 
 
 
-TOKEN = os.environ['token']
-
 name = "BOT GAME"
+
+TOKEN = os.environ['token']
 
 
 
