@@ -1,11 +1,14 @@
+
+
+import os
 import discord
 import requests
 import RockPaperScissors as rps
 import BattleShip as bs
 import TicTacToe as ttt
-import BlackJack as bj
-list_of_cards = [1,2,3,4,5,6,7,8,9,10,10,10,10,1,2,3,4,5,6,7,8,9,10,10,10,10,
-                 1,2,3,4,5,6,7,8,9,10,10,10,10,1,2,3,4,5,6,7,8,9,10,10,10,10]
+#import BlackJack as bj
+# list_of_cards = [1,2,3,4,5,6,7,8,9,10,10,10,10,1,2,3,4,5,6,7,8,9,10,10,10,10,
+                #  1,2,3,4,5,6,7,8,9,10,10,10,10,1,2,3,4,5,6,7,8,9,10,10,10,10]
 
 
 rpsStatus = 0
@@ -29,8 +32,15 @@ channel = 888638986413809674
 
 
 #https://discordpy.readthedocs.io/en/stable/quickstart.html
+<<<<<<< HEAD
 TOKEN = ('ODg4NjMyNTg0OTMyODM1Mzk4.YUVhlg.oyKLti1oJhzcCZkCUi_9xvtwbQQ')
 name = "GAME-BOT"
+=======
+
+TOKEN = os.environ['token']
+
+name = "NAME"
+>>>>>>> master
 
 #pfp
 pfp_path = "pfp_temp.png"
@@ -73,7 +83,7 @@ async def on_message(message):
     if message.content.startswith('$test'):
       await message.author.send("Test")
 
-    if message.content.startswith('$help 🕹'): #embed stuff https://cog-creators.github.io/discord-embed-sandbox/
+    if message.content.startswith('$help'): #embed stuff https://cog-creators.github.io/discord-embed-sandbox/
       embed=discord.Embed(title="Help Command", color=0x264af4)
       embed.add_field(name="Games", value="`$PlayRPS`\n`$PlayTTT \n$PlayBS`", inline=True)
       await message.channel.send(embed=embed)
@@ -109,25 +119,25 @@ async def on_message(message):
       bsGame = bs.battleship()
       await message.channel.send("Started 2 player Battleship")
       await message.author.send(bsGame.showboards(1))
-      await message.author.send("It's time to setup your ships. Enter ship type. (carrier, submarine, destroyer, cruiser, battleship)")
+      await message.author.send("It's time to setup your ships. Enter ship type. ($carrier, $submarine, $destroyer, $cruiser, $battleship)")
       bsTypeStatus = 1
 
     if message.content in ['$carrier','$submarine', '$destroyer','$cruiser','$battleship'] and bsTypeStatus == 1:
       bsType = message.content.replace('$','')
-      await message.author.send("Select a direction for your ship.")
+      await message.author.send("Select a direction for your ship. ($left, $up, $right, $down")
       bsTypeStatus = 0
       bsDirectionStatus = 1
 
     if message.content in ['$left','$right','$up','$down'] and bsDirectionStatus == 1:
       bsDirection = message.content.replace('$','')
-      await message.author.send("Select the coordinates for your ship")
+      await message.author.send("Select the coordinates for your ship. Eg $55")
       bsDirectionStatus = 0
       bsCoordinateStatus = 1
 
     try:
       if message.content.startswith('$') and message.content[1:3].isdigit() and bsCoordinateStatus == 1:
         bsCoordinates = message.content.replace('$','')
-        await message.author.send("Which player is this?")
+        await message.author.send("Which player is this? $1 or $2")
         bsCoordinateStatus = 0
         bsPlayerStatus = 1
     except:
